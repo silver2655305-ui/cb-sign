@@ -31,15 +31,12 @@
 
     /* ---- sections ---- */
     section.card{background:#fbf7ec;border:1px solid var(--line);border-radius:2px;margin:26px 20px 0;padding:26px 24px;}
-    
-    /* 빈 화면 방지 및 안정성 확보를 위한 초기 스타일 지정 */
     section.card { opacity: 1 !important; transform: none !important; }
 
     .purpose p {font-size: 14.5px; line-height: 1.95; color: var(--ink-soft); margin: 0 0 18px 0; text-align: justify;}
     .purpose p:last-child{margin-bottom:0;}
     .purpose p strong{color:var(--ink);font-weight:700;}
     
-    /* 본문 주요 문구 강조 스타일 */
     .purpose .main-highlight {
       font-family: 'Noto Serif KR', serif;
       font-weight: 700;
@@ -79,13 +76,12 @@
     button.submit:disabled{background:#a9a48d;cursor:not-allowed;}
     button.submit:hover:not(:disabled){background:var(--ink-soft);}
 
-    /* ---- 완료 화면 스타일 최적화 ---- */
+    /* ---- 완료 화면 ---- */
     .thanks{text-align:center;padding:60px 24px;}
     .thanks .stamp{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--gold);border:2px solid var(--gold);display:inline-block;padding:10px 22px;border-radius:4px;transform:rotate(-3deg);margin-bottom:32px;}
     .thanks .completion-text{font-family:'Noto Serif KR',serif;font-weight:700;font-size:28px;line-height:1.5;color:var(--ink);margin:0 0 20px 0;word-break:keep-all;}
     .thanks .completion-sub{font-size:15px;line-height:1.8;color:var(--ink-soft);margin:0 0 36px 0;word-break:keep-all;}
     
-    /* 완료 화면 하단 실시간 카운터 배지 스타일 */
     .thanks .success-tally {
       display: inline-block;
       font-family: 'Noto Serif KR', serif;
@@ -123,15 +119,10 @@
 
     <section class="card purpose">
       <p class="main-highlight">기억은 누군가의 숨결이며,<br>기록은 그 삶을 영원히 이어주는 힘입니다.</p>
-      
       <p>충북영상자서전 사업은 도민 한 사람 한 사람의 삶을 영상으로 기록하여 가족에게는 가장 소중한 유산을, 지역사회에는 살아있는 역사를 남기는 전국 최초의 공공기록사업이며 우리의 미래세대에게 전해야 할 소중한 문화유산입니다.</p>
-      
       <p>충청북도노인종합복지관은 2022년 11월부터 영상기획팀 직원들의 헌신적인 노력과 <strong>150개 '같이가치약속' 협력기관</strong>의 참여로 지역의 기록문화를 만들어 왔습니다.</p>
-      
       <p>또한 시니어강사 14명과 시니어 인생기록사(유튜버) 90명을 양성하고, 직접 찾아가는 서비스를 통해 현재까지 <strong>11,000여 명의 도민의 삶과 이야기를 영상으로 기록</strong>하며 가족의 소중한 추억과 지역의 역사를 미래세대에 전하는 공공기록사업을 이어오고 있습니다.</p>
-      
       <p>이 사업은 단순한 영상 제작을 넘어 어르신의 삶과 지혜를 기록하고, 시니어의 사회참여와 세대공감의 가치를 실현하며, 충북만의 소중한 기록문화와 공동체의 기억을 미래세대에 전하는 공공사업으로 이어지기를 지지합니다.</p>
-      
       <p>그러나 충청북도의 재정 여건 악화로 인해 2027년 사업예산 전액 삭감이 검토되면서 사업이 중단될 위기에 놓여 있습니다.</p>
     </section>
 
@@ -148,7 +139,6 @@
 
     <section class="card purpose">
       <p class="main-highlight">오늘 기록하지 않으면<br>내일은 기록할 수 없습니다.</p>
-      
       <p>지금 이 순간에도 우리의 부모님과 어르신들의 소중한 이야기는 시간 속으로 사라지고 있습니다. 우리는 그 삶을 기록하고 기억해야 합니다.</p>
       <p style="margin-top:14px;">충북도민의 삶이 충북의 역사로 이어질 수 있도록, 충청북도노인종합복지관에서 추진하는 "<strong>도민의 삶을 기록하는 사업</strong>"이 충청북도 전역에서 더욱 큰 꿈을 갖고 내년에도 지속될 수 있도록 여러분의 따뜻한 관심과 소중한 뜻을 모아 주십시오.</p>
       <p style="margin-top:14px;">여러분의 한 번의 서명이 충북의 기억을 지키고, 미래세대에게 소중한 유산을 전하는 힘이 됩니다.</p>
@@ -174,7 +164,8 @@
         </div>
         <div class="field">
           <label for="f-contact">연락처</label>
-          <input type="tel" id="f-contact" required placeholder="010-0000-0000" autocomplete="tel">
+          <!-- 플레이스홀더를 숫자 기입 형태로 수정 -->
+          <input type="tel" id="f-contact" required placeholder="예: 01012345678 (숫자만 입력 가능)" autocomplete="tel">
         </div>
         <div class="field">
           <label>개인정보 수집·이용 동의</label>
@@ -203,15 +194,12 @@
   </div>
 </div>
 
-<!-- 제출 완료 전용 화면 (인원수 카운트 기능 추가 완료) -->
-<div id="success-content" style="with:100%; display:none;">
+<div id="success-content" style="width:100%; display:none;">
   <div class="wrap" style="padding-top: 80px;">
     <div class="thanks">
       <div class="stamp">서명 완료</div>
       <p class="completion-text">사람은 떠나도<br>이야기는 남아야 합니다</p>
       <p class="completion-sub">충북영상자서전 사업이 예산 삭감으로 중단될 위기에 놓여 있습니다.<br>도민 여러분의 서명이 충북의 기억을 지키는 힘이 됩니다.</p>
-      
-      <!-- 실시간 제출 인원 노출 컴포넌트 -->
       <div class="success-tally" id="success-tally">지금까지 <b>...</b>명이 함께했습니다</div>
     </div>
   </div>
@@ -226,11 +214,9 @@
 
 <script>
 (function(){
-  // ---------- entrance motion on scroll ----------
   const cards = document.querySelectorAll('section.card');
   cards.forEach(c=> c.classList.add('in-view'));
 
-  // ---------- signature pad ----------
   const canvas = document.getElementById('sigPad');
   const ctx = canvas.getContext('2d');
   function fitCanvas(){
@@ -270,10 +256,8 @@
     ctx.clearRect(0,0,canvas.width,canvas.height); hasDrawn = false;
   });
 
-  // ---------- Google Sheets 연동 설정 ----------
   const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyM-vjfxA2Wgu6RNtL_Y-1xvwSQg5GX72sKVcm2GKJzrsrndDFgzIZhOiG4mxAzQlJnrA/exec';
 
-  // ---------- tally (카운터 통합 갱신) ----------
   async function refreshTally(){
     try{
       const res = await fetch(SCRIPT_URL);
@@ -289,7 +273,6 @@
   }
   refreshTally();
 
-  // ---------- alert modal ----------
   const alertModal = document.getElementById('alertModal');
   const alertText = document.getElementById('alertText');
   function showAlert(text){
@@ -297,9 +280,7 @@
     alertModal.style.display = 'flex';
   }
   document.getElementById('alertOk').addEventListener('click', ()=>{ alertModal.style.display = 'none'; });
-  alertModal.addEventListener('click', (e)=>{ if(e.target === alertModal) alertModal.style.display = 'none'; });
 
-  // ---------- submit ----------
   const form = document.getElementById('sigForm');
   const submitBtn = document.getElementById('submitBtn');
 
@@ -314,9 +295,11 @@
     if(!name || !addr || !contact){
       showAlert('성명, 주소, 연락처를 모두 입력해 주세요.'); return;
     }
-    const phonePattern = /^01[0-9]-\d{3,4}-\d{4}$/;
-    if(!phonePattern.test(contact)){
-      showAlert('연락처는 010-0000-0000 형식(- 포함)으로 입력해 주세요.'); return;
+    
+    // 하이픈 유무에 상관없이 숫자 9~11자리 형식이면 통과하도록 정규식 완화 수정
+    const phonePattern = /^\d{9,11}$|^\d{2,3}-\d{3,4}-\d{4}$/;
+    if(!phonePattern.test(contact.replace(/\s/g, ''))){
+      showAlert('올바른 연락처 형식을 입력해 주세요. (예: 01012345678)'); return;
     }
     if(!consent){
       showAlert('개인정보 수집·이용에 동의 여부를 선택해 주세요.'); return;
@@ -345,7 +328,6 @@
         body: JSON.stringify(entry)
       });
       
-      // 구글 시트 등록 후 실시간 숫자 한 번 더 갱신 후 화면 전환
       await refreshTally();
       
       document.getElementById('main-content').style.display = 'none';
