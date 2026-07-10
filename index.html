@@ -4,44 +4,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>충북의 기록 유산을 지키는 공동서명</title>
+
+  <!-- 링크 공유 시 제목/설명/썸네일이 뜨도록 하는 태그입니다. -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="충북의 기록 유산을 지키는 공동서명">
+  <meta property="og:description" content="도민의 삶을 기록하는 사업은 계속되어야 합니다. 여러분의 서명이 충북의 기억을 지킵니다.">
+  <meta property="og:url" content="https://silver2655305-ui.github.io/cb-sign/">
+  <meta property="og:image" content="https://silver2655305-ui.github.io/cb-sign/thumbnail.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="충북의 기록 유산을 지키는 공동서명">
+  <meta name="twitter:description" content="도민의 삶을 기록하는 사업은 계속되어야 합니다.">
+  <meta name="twitter:image" content="https://silver2655305-ui.github.io/cb-sign/thumbnail.png">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap');
     :root{
-      --ink:#1f2a3d;
-      --ink-soft:#334257;
-      --paper:#f3ead8;
-      --paper-deep:#e8dcbf;
+      --ink:#4a3420;
+      --ink-soft:#5c4530;
+      --paper:#faf3e4;
+      --paper-deep:#efe3c8;
       --gold:#b9862f;
-      --gold-soft:#d7ab5c;
-      --line:#c9bd9d;
+      --gold-soft:#8c5a1f;
+      --line:#d9c9a3;
       --danger:#a4453a;
+      --hero-bg:#f0dcb0;
     }
     *{box-sizing:border-box;}
     body{margin:0;background:var(--paper);color:var(--ink);font-family:'Noto Sans KR',sans-serif;}
     .wrap{max-width:720px;margin:0 auto;padding-bottom:80px;}
 
     /* ---- hero ---- */
-    .hero{background:var(--ink);color:var(--paper);padding:56px 28px 0;text-align:center;position:relative;}
-    .eyebrow{font-family:'Noto Sans KR',sans-serif;font-weight:700;letter-spacing:.15em;font-size:12px;color:var(--gold-soft);margin-bottom:14px;}
-    .hero h1{font-family:'Noto Serif KR',serif;font-weight:700;font-size:clamp(28px,5vw,40px);line-height:1.25;margin:0;}
-    .hero p{font-size:14.5px;line-height:1.8;color:#d7dbe4;max-width:520px;margin:0 auto 28px;}
-    .tally{display:inline-block;font-family:'Noto Serif KR',serif;font-size:14px;color:var(--paper);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);padding:8px 18px;border-radius:999px;margin-bottom:26px;}
+    .hero{background:linear-gradient(180deg, var(--hero-bg) 0%, var(--paper) 100%);color:var(--ink);padding:56px 28px 0;text-align:center;position:relative;}
+    .eyebrow{font-family:'Noto Sans KR',sans-serif;font-weight:700;letter-spacing:.15em;font-size:18px;color:var(--gold-soft);margin-bottom:14px;}
+    .hero h1{font-family:'Noto Serif KR',serif;font-weight:700;font-size:clamp(26px,5vw,40px);line-height:1.25;margin:0;color:var(--ink);}
+    .hero p{font-size:14.5px;line-height:1.8;color:var(--ink-soft);max-width:520px;margin:0 auto 28px;}
+    .tally{display:inline-block;font-family:'Noto Serif KR',serif;font-size:14px;color:var(--ink);background:rgba(255,255,255,.55);border:1px solid rgba(74,52,32,.2);padding:8px 18px;border-radius:999px;margin-bottom:26px;}
     .tally b{color:var(--gold-soft);font-size:16px;}
     .sprocket{height:16px;background:radial-gradient(circle at 11px 8px, var(--paper) 5.5px, transparent 6.5px) repeat-x;background-size:26px 16px;}
 
     /* ---- sections ---- */
     section.card{background:#fbf7ec;border:1px solid var(--line);border-radius:2px;margin:26px 20px 0;padding:26px 24px;}
+    
+    /* 빈 화면 방지 및 안정성 확보를 위한 초기 스타일 지정 */
     section.card { opacity: 1 !important; transform: none !important; }
 
     .purpose p {font-size: 14.5px; line-height: 1.95; color: var(--ink-soft); margin: 0 0 18px 0; text-align: justify;}
     .purpose p:last-child{margin-bottom:0;}
     .purpose p strong{color:var(--ink);font-weight:700;}
     
+    /* 본문 주요 문구 강조 스타일 */
     .purpose .main-highlight {
       font-family: 'Noto Serif KR', serif;
       font-weight: 700;
-      font-size: 20px;
-      line-height: 1.6;
+      font-size: 18px;
+      line-height: 1.4;
       color: var(--gold);
       text-align: center !important;
       margin: 15px 0 32px 0;
@@ -50,10 +65,10 @@
 
     .purpose .quote{font-family:'Noto Serif KR',serif;font-style:italic;color:var(--gold);text-align:center;margin:18px 0 4px;font-size:14.5px;}
     .risk-list{margin:0;padding:0;list-style:none;}
-    .risk-list li{position:relative;padding:8px 0 8px 20px;font-size:14px;line-height:1.7;color:var(--ink-soft);border-bottom:1px dashed var(--line);}
+    .risk-list li{position:relative;padding:8px 0 8px 20px;font-size:16px;line-height:1.7;color:var(--ink-soft);border-bottom:1px dashed var(--line);text-align: center;}
     .risk-list li:last-child{border-bottom:none;}
-    .risk-list li::before{content:"—";position:absolute;left:0;color:var(--gold);}
-    .hero .subtitle{font-family:'Noto Serif KR',serif;font-weight:700;font-size:18px;line-height:1.6;color:var(--gold-soft);text-align:center;margin:16px auto 28px;max-width:90%;}
+    .risk-list li::before{content:none;}
+    .hero .subtitle{font-family:'Noto Serif KR',serif;font-weight:700;font-size:20px;line-height:1.6;color:var(--gold-soft);text-align:center;margin:16px auto 28px;max-width:90%;}
 
     /* ---- form ---- */
     .field{margin-bottom:18px;}
@@ -76,12 +91,13 @@
     button.submit:disabled{background:#a9a48d;cursor:not-allowed;}
     button.submit:hover:not(:disabled){background:var(--ink-soft);}
 
-    /* ---- 완료 화면 ---- */
+    /* ---- 완료 화면 스타일 최적화 ---- */
     .thanks{text-align:center;padding:60px 24px;}
     .thanks .stamp{font-family:'Noto Serif KR',serif;font-size:20px;color:var(--gold);border:2px solid var(--gold);display:inline-block;padding:10px 22px;border-radius:4px;transform:rotate(-3deg);margin-bottom:32px;}
     .thanks .completion-text{font-family:'Noto Serif KR',serif;font-weight:700;font-size:28px;line-height:1.5;color:var(--ink);margin:0 0 20px 0;word-break:keep-all;}
     .thanks .completion-sub{font-size:15px;line-height:1.8;color:var(--ink-soft);margin:0 0 36px 0;word-break:keep-all;}
     
+    /* 완료 화면 하단 실시간 카운터 배지 스타일 */
     .thanks .success-tally {
       display: inline-block;
       font-family: 'Noto Serif KR', serif;
@@ -110,45 +126,58 @@
   <div class="wrap">
 
     <div class="hero">
-      <div class="eyebrow">사람은 기록이 되고, 기록은 충북의 역사가 됩니다.</div>
+      <div class="eyebrow">사람은 기록이 되고, <br> 기록은 충북의 역사가 됩니다.</div>
+      <div style="margin-bottom: 30px;"></div>
       <h1>충북의 기록유산을 지키는<br>공동서명</h1>
-      <p class="subtitle">도민의 삶을 기록하는 사업은 계속되어야 합니다.</p>
+      <p class="subtitle">도민의 삶을 기록하는 사업은<br>계속되어야 합니다.</p>
       <div class="tally" id="tally">지금까지 <b>...</b>명이 함께했습니다</div>
     </div>
     <div class="sprocket"></div>
 
     <section class="card purpose">
       <p class="main-highlight">기억은 누군가의 숨결이며,<br>기록은 그 삶을 영원히 이어주는 힘입니다.</p>
+      
       <p>충북영상자서전 사업은 도민 한 사람 한 사람의 삶을 영상으로 기록하여 가족에게는 가장 소중한 유산을, 지역사회에는 살아있는 역사를 남기는 전국 최초의 공공기록사업이며 우리의 미래세대에게 전해야 할 소중한 문화유산입니다.</p>
+      
       <p>충청북도노인종합복지관은 2022년 11월부터 영상기획팀 직원들의 헌신적인 노력과 <strong>150개 '같이가치약속' 협력기관</strong>의 참여로 지역의 기록문화를 만들어 왔습니다.</p>
+      
       <p>또한 시니어강사 14명과 시니어 인생기록사(유튜버) 90명을 양성하고, 직접 찾아가는 서비스를 통해 현재까지 <strong>11,000여 명의 도민의 삶과 이야기를 영상으로 기록</strong>하며 가족의 소중한 추억과 지역의 역사를 미래세대에 전하는 공공기록사업을 이어오고 있습니다.</p>
-      <p>이 사업은 단순한 영상 제작을 넘어 어르신의 삶과 지혜를 기록하고, 시니어의 사회참여와 세대공감의 가치를 실현하며, 충북만의 소중한 기록문화와 공동체의 기억을 미래세대에 전하는 공공사업으로 이어지기를 지지합니다.</p>
+      
+      <p>이 사업은 단순한 영상 제작을 넘어 어르신의 삶과 지혜를 기록하고, 시니어의 사회참여와 세대공감의 가치를 실현하며, 충북만의 소중한 기록문화를 만들어가는 의미 있는 사업입니다.</p>
+      
       <p>그러나 충청북도의 재정 여건 악화로 인해 2027년 사업예산 전액 삭감이 검토되면서 사업이 중단될 위기에 놓여 있습니다.</p>
     </section>
 
     <section class="card purpose">
-      <h2 class="section-title">사업이 중단된다면</h2>
+      <p class="main-highlight">사업이 중단된다면</p>
       <ul class="risk-list">
-        <li>충북의 소중한 기록유산이 더 이상 이어질 수 없습니다.</li>
-        <li>전국이 벤치마킹하는 충북의 대표 기록문화사업이 중단됩니다.</li>
-        <li>시니어 강사 13명과 시니어 인생기록사(유튜버) 90명의 활동 기반이 사라집니다.</li>
-        <li>150개 기관이 함께 만들어 온 지역사회의 약속과 협력체계가 무너집니다.</li>
-        <li>세대공감과 세대통합의 가치가 이어질 수 없습니다.</li>
+        <li>"충북의 소중한 기록유산이 더 이상 이어질 수 없습니다."</li>
+        <li>"전국이 벤치마킹하는 충북의 대표 기록문화사업이 중단됩니다."</li>
+        <li>"시니어 강사 13명과 시니어 인생기록사(유튜버) 90명의 활동 기반이 사라집니다."</li>
+        <li>"150개 기관이 함께 만들어 온 지역사회의 약속과 협력체계가 무너집니다."</li>
+        <li>"어렵게 시도했던 세대를 잇는 교육과 기록문화가 단절됩니다."</li>
+        <li>"무엇보다!! 사람이 사라집니다."</li>
       </ul>
+     <p></p> 이 사업을 함께 만들어 온 기록전문인력과 직원들의 일자리가 사라지는 것은 곧 충북의 기록문화가 지속될 기반을 잃는다는 의미입니다.<p></p>
+        <div class="quote">— 기록은 사람을 통해 남습니다. 사람이 사라지면 기록도 이어질 수 없습니다 —</div>
     </section>
 
     <section class="card purpose">
       <p class="main-highlight">오늘 기록하지 않으면<br>내일은 기록할 수 없습니다.</p>
-      <p>지금 이 순간에도 우리의 부모님과 어르신들의 소중한 이야기는 시간 속으로 사라지고 있습니다. 우리는 그 삶을 기록하고 기억해야 합니다.</p>
-      <p style="margin-top:14px;">충북도민의 삶이 충북의 역사로 이어질 수 있도록, 충청북도노인종합복지관에서 추진하는 "<strong>도민의 삶을 기록하는 사업</strong>"이 충청북도 전역에서 더욱 큰 꿈을 갖고 내년에도 지속될 수 있도록 여러분의 따뜻한 관심과 소중한 뜻을 모아 주십시오.</p>
-      <p style="margin-top:14px;">여러분의 한 번의 서명이 충북의 기억을 지키고, 미래세대에게 소중한 유산을 전하는 힘이 됩니다.</p>
+      
+      <p>지금 이 순간에도 우리의 부모님과 어르신들의 소중한 이야기는 시간 속으로 사라지고 있습니다. <br> 우리는 그 삶을 기록하고 기억해야 합니다.</p>
+       <p class="main-highlight">사람은 떠나도 이야기는 남아야 합니다.</p>
+      <p style="margin-top:16px;">충북도민의 삶이 충북의 역사로 이어질 수 있도록, 충청북도노인종합복지관에서 추진하는 "<strong>도민의 삶을 기록하는 사업</strong>"이 충청북도 전역에서 더욱 큰 꿈을 갖고 내년에도 지속될 수 있도록 여러분의 따뜻한 관심과 소중한 뜻을 모아 주십시오.</p>
+      <p style="margin-top:16px;">여러분의 한 번의 서명이 충북의 기억을 지키고, <br> 미래세대에게 소중한 유산을 전하는 힘이 됩니다.</p>
       <div class="quote">— 사람은 떠나도 이야기는 남아야 합니다 —</div>
     </section>
 
     <section class="card purpose">
       <h2 class="section-title">서명 취지</h2>
-      <p>저는 충북도민의 삶을 기록하는 사업이 충청북도노인종합복지관에서 지속적으로 추진될 수 있도록 필요한 사업예산(3억 원)이 확보되기를 희망합니다.</p>
-      <p>또한 본 사업이 충청북도 어르신들의 삶과 지역의 역사를 기록하는 대표적인 광역 복지사업으로 지속·확대되어, 도민 한분한분의 소중한 기록문화와 공동체의 기억을 미래세대에 전하는 공공사업으로 이어지기를 지지합니다.</p>
+<p>저는 충북도민의 삶을 기록하는 충북영상자서전 사업이 충청북도노인종합복지관에서 지속적으로 추진되기를 희망합니다.<br>
+  <br>
+또한 본 사업이 충청북도 어르신들의 삶과 지역의 역사를 기록하는 대표적인 광역 복지사업으로 지속·확대되어, <br>도민 한 분 한 분의 소중한 삶과 지역의 기억을 미래세대에 전하는 공공사업으로 이어지기를 지지합니다.<br> <br> 
+이를 위해 사업의 안정적인 운영에 필요한 예산이 충분히 확보되어 사업이 중단 없이 이어지기를 희망합니다.<p></p>
     </section>
 
     <section class="card" id="form-section">
@@ -164,8 +193,7 @@
         </div>
         <div class="field">
           <label for="f-contact">연락처</label>
-          <!-- 플레이스홀더를 숫자 기입 형태로 수정 -->
-          <input type="tel" id="f-contact" required placeholder="예: 01012345678 (숫자만 입력 가능)" autocomplete="tel">
+          <input type="tel" id="f-contact" required placeholder="010-0000-0000" autocomplete="tel">
         </div>
         <div class="field">
           <label>개인정보 수집·이용 동의</label>
@@ -194,12 +222,15 @@
   </div>
 </div>
 
-<div id="success-content" style="width:100%; display:none;">
+<!-- 제출 완료 전용 화면 (인원수 카운트 기능 추가 완료) -->
+<div id="success-content" style="with:100%; display:none;">
   <div class="wrap" style="padding-top: 80px;">
     <div class="thanks">
       <div class="stamp">서명 완료</div>
       <p class="completion-text">사람은 떠나도<br>이야기는 남아야 합니다</p>
       <p class="completion-sub">충북영상자서전 사업이 예산 삭감으로 중단될 위기에 놓여 있습니다.<br>도민 여러분의 서명이 충북의 기억을 지키는 힘이 됩니다.</p>
+      
+      <!-- 실시간 제출 인원 노출 컴포넌트 -->
       <div class="success-tally" id="success-tally">지금까지 <b>...</b>명이 함께했습니다</div>
     </div>
   </div>
@@ -214,9 +245,11 @@
 
 <script>
 (function(){
+  // ---------- entrance motion on scroll ----------
   const cards = document.querySelectorAll('section.card');
   cards.forEach(c=> c.classList.add('in-view'));
 
+  // ---------- signature pad ----------
   const canvas = document.getElementById('sigPad');
   const ctx = canvas.getContext('2d');
   function fitCanvas(){
@@ -256,8 +289,10 @@
     ctx.clearRect(0,0,canvas.width,canvas.height); hasDrawn = false;
   });
 
+  // ---------- Google Sheets 연동 설정 ----------
   const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyM-vjfxA2Wgu6RNtL_Y-1xvwSQg5GX72sKVcm2GKJzrsrndDFgzIZhOiG4mxAzQlJnrA/exec';
 
+  // ---------- tally (카운터 통합 갱신) ----------
   async function refreshTally(){
     try{
       const res = await fetch(SCRIPT_URL);
@@ -273,6 +308,7 @@
   }
   refreshTally();
 
+  // ---------- alert modal ----------
   const alertModal = document.getElementById('alertModal');
   const alertText = document.getElementById('alertText');
   function showAlert(text){
@@ -280,7 +316,9 @@
     alertModal.style.display = 'flex';
   }
   document.getElementById('alertOk').addEventListener('click', ()=>{ alertModal.style.display = 'none'; });
+  alertModal.addEventListener('click', (e)=>{ if(e.target === alertModal) alertModal.style.display = 'none'; });
 
+  // ---------- submit ----------
   const form = document.getElementById('sigForm');
   const submitBtn = document.getElementById('submitBtn');
 
@@ -295,11 +333,9 @@
     if(!name || !addr || !contact){
       showAlert('성명, 주소, 연락처를 모두 입력해 주세요.'); return;
     }
-    
-    // 하이픈 유무에 상관없이 숫자 9~11자리 형식이면 통과하도록 정규식 완화 수정
-    const phonePattern = /^\d{9,11}$|^\d{2,3}-\d{3,4}-\d{4}$/;
-    if(!phonePattern.test(contact.replace(/\s/g, ''))){
-      showAlert('올바른 연락처 형식을 입력해 주세요. (예: 01012345678)'); return;
+    const phonePattern = /^01[0-9]-\d{3,4}-\d{4}$/;
+    if(!phonePattern.test(contact)){
+      showAlert('연락처는 010-0000-0000 형식(- 포함)으로 입력해 주세요.'); return;
     }
     if(!consent){
       showAlert('개인정보 수집·이용에 동의 여부를 선택해 주세요.'); return;
@@ -328,6 +364,7 @@
         body: JSON.stringify(entry)
       });
       
+      // 구글 시트 등록 후 실시간 숫자 한 번 더 갱신 후 화면 전환
       await refreshTally();
       
       document.getElementById('main-content').style.display = 'none';
