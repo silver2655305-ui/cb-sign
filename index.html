@@ -283,12 +283,14 @@
     const t = e.touches ? e.touches[0] : e;
     return { x: t.clientX - rect.left, y: t.clientY - rect.top };
   }
-  function start(e){ drawing = true; hasDrawn = true; last = pos(e); e.preventDefault(); }
+  function start(e){ drawing = true; last = pos(e); e.preventDefault(); }
   function move(e){
     if(!drawing) return;
     const p = pos(e);
     ctx.beginPath(); ctx.moveTo(last.x, last.y); ctx.lineTo(p.x, p.y); ctx.stroke();
-    last = p; e.preventDefault();
+    last = p;
+    hasDrawn = true; // 실제로 선이 그어졌을 때만 서명한 것으로 인정
+    e.preventDefault();
   }
   function end(){ drawing = false; }
   canvas.addEventListener('mousedown', start);
@@ -356,7 +358,7 @@
       showAlert('개인정보 수집에 동의하셔야 서명을 제출할 수 있습니다.'); return;
     }
     if(!hasDrawn){
-      showAlert('서명란에 서명을 남겨 주세요.'); return;
+      showAlert('서명을 하지 않았습니다. 서명란에 서명을 해주세요.'); return;
     }
 
     submitBtn.disabled = true; submitBtn.textContent = '제출 중...';
